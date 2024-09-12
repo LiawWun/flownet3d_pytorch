@@ -6,6 +6,10 @@ The pytorch implementation of [flownet3d](https://github.com/xingyul/flownet3d) 
 ### Requirements
 PyTorch>=1.0: https://pytorch.org
 
+```
+conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.2 -c pytorch
+```
+
 scipy>=1.2
 
 numpy
@@ -13,6 +17,10 @@ numpy
 h5py
 
 tqdm
+
+In the lib/src
+
+Replaced all mentions of ```AT_CHECK``` and ```THCState_getCurrentStream(state)``` with ```TORCH_CHECK``` and ```at::cuda::getCurrentCUDAStream()```, respectively.
 
 ### Install
 Install this library by running the following command:
